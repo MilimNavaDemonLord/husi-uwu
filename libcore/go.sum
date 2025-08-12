@@ -57,8 +57,8 @@ github.com/mdlayher/socket v0.5.1 h1:VZaqt6RkGkt2OE9l3GcC6nZkqD3xKeQLyfleW/uBcos
 github.com/mdlayher/socket v0.5.1/go.mod h1:TjPLHI1UgwEv5J1B5q0zTZq12A/6H7nKmtTanQE37IQ=
 github.com/metacubex/tfo-go v0.0.0-20241231083714-66613d49c422 h1:zGeQt3UyNydIVrMRB97AA5WsYEau/TyCnRtTf1yUmJY=
 github.com/metacubex/tfo-go v0.0.0-20241231083714-66613d49c422/go.mod h1:l9oLnLoEXyGZ5RVLsh7QCC5XsouTUyKk4F2nLm2DHLw=
-github.com/metacubex/utls v1.8.0 h1:mSYi6FMnmc5riARl5UZDmWVy710z+P5b7xuGW0lV9ac=
-github.com/metacubex/utls v1.8.0/go.mod h1:FdjYzVfCtgtna19hX0ER1Xsa5uJInwdQ4IcaaI98lEQ=
+github.com/metacubex/utls v1.8.1-0.20250811145843-49b4f106169a h1:IIzlVmDoB4+7b0BUcLZaY5+AirhhLFep3PhwkAFMRnQ=
+github.com/metacubex/utls v1.8.1-0.20250811145843-49b4f106169a/go.mod h1:FdjYzVfCtgtna19hX0ER1Xsa5uJInwdQ4IcaaI98lEQ=
 github.com/mholt/acmez/v3 v3.1.2 h1:auob8J/0FhmdClQicvJvuDavgd5ezwLBfKuYmynhYzc=
 github.com/mholt/acmez/v3 v3.1.2/go.mod h1:L1wOU06KKvq7tswuMDwKdcHeKpFFgkppZy/y0DFxagQ=
 github.com/miekg/dns v1.1.67 h1:kg0EHj0G4bfT5/oOys6HhZw4vmMlnoZ+gDu8tJ/AlI0=
@@ -89,8 +89,6 @@ github.com/sagernet/quic-go v0.52.0-beta.1/go.mod h1:OV+V5kEBb8kJS7k29MzDu6oj9Gy
 github.com/sagernet/sing v0.6.9/go.mod h1:ARkL0gM13/Iv5VCZmci/NuoOlePoIsW0m7BWfln/Hak=
 github.com/sagernet/sing v0.7.5 h1:gNMwZCLPqR+4e0g6dwi0sSsrvOmoMjpZgqxKsuJZatc=
 github.com/sagernet/sing v0.7.5/go.mod h1:ARkL0gM13/Iv5VCZmci/NuoOlePoIsW0m7BWfln/Hak=
-github.com/sagernet/sing-box v1.12.1 h1:2BidbzTr/3szMlCSNOBq2XO/g+SAabNjAdAgoyYA5Ww=
-github.com/sagernet/sing-box v1.12.1/go.mod h1:n4wF8l5wJ66kK0nhvMc+Zk4hEB/BjS1VuVLACMxn2nk=
 github.com/sagernet/sing-mux v0.3.2 h1:meZVFiiStvHThb/trcpAkCrmtJOuItG5Dzl1RRP5/NE=
 github.com/sagernet/sing-mux v0.3.2/go.mod h1:pht8iFY4c9Xltj7rhVd208npkNaeCxzyXCgulDPLUDA=
 github.com/sagernet/sing-quic v0.5.0-beta.3 h1:X/acRNsqQNfDlmwE7SorHfaZiny5e67hqIzM/592ric=
@@ -103,8 +101,6 @@ github.com/sagernet/sing-shadowtls v0.2.1-0.20250503051639-fcd445d33c11 h1:tK+75
 github.com/sagernet/sing-shadowtls v0.2.1-0.20250503051639-fcd445d33c11/go.mod h1:sWqKnGlMipCHaGsw1sTTlimyUpgzP4WP3pjhCsYt9oA=
 github.com/sagernet/sing-tun v0.7.0-beta.1 h1:mBIFXYAnGO5ey/HcCYanqnBx61E7yF8zTFGRZonGYmY=
 github.com/sagernet/sing-tun v0.7.0-beta.1/go.mod h1:AHJuRrLbNRJuivuFZ2VhXwDj4ViYp14szG5EkkKAqRQ=
-github.com/sagernet/sing-vmess v0.2.6 h1:1c4dGzeGy0kpBXXrT1sgiMZtHhdJylIT8eWrGhJYZec=
-github.com/sagernet/sing-vmess v0.2.6/go.mod h1:5aYoOtYksAyS0NXDm0qKeTYW1yoE1bJVcv+XLcVoyJs=
 github.com/sagernet/smux v1.5.34-mod.2 h1:gkmBjIjlJ2zQKpLigOkFur5kBKdV6bNRoFu2WkltRQ4=
 github.com/sagernet/smux v1.5.34-mod.2/go.mod h1:0KW0+R+ycvA2INW4gbsd7BNyg+HEfLIAxa5N02/28Zc=
 github.com/sagernet/wireguard-go v0.0.1-beta.7 h1:ltgBwYHfr+9Wz1eG59NiWnHrYEkDKHG7otNZvu85DXI=
@@ -133,6 +129,10 @@ github.com/xchacha20-poly1305/cazilla v1.0.2 h1:IFant4Apw7saEwwLMr6UDlRiJ/F+x30k
 github.com/xchacha20-poly1305/cazilla v1.0.2/go.mod h1:CRNqqSLuWw8gStu7qDwjPYmsLE91OCVWazN9AH4LyWc=
 github.com/xchacha20-poly1305/libping v0.9.1 h1:tKQdM6hg8yNekpgvSeyu+qsRQLOp7ctMu0siqswbWnE=
 github.com/xchacha20-poly1305/libping v0.9.1/go.mod h1:2jTtabr3FbIWfIolum/U8zmE77vvmb3qMwDCJTcV3/8=
+github.com/xchacha20-poly1305/sing-box v1.12.2-0.20250814010959-411c1e33816d h1:12vCdrqj3nFxBRwK+6a23JTB5sMKu2KhqPnAI9MaFJ8=
+github.com/xchacha20-poly1305/sing-box v1.12.2-0.20250814010959-411c1e33816d/go.mod h1:JIHezyrxn/ORZFpXz6v6aq2GgZZwyF/AgWG2MrWBltk=
+github.com/xchacha20-poly1305/sing-vmess v0.2.7-0.20250814010615-f2ca0ade759d h1:tkAKepLCXRyDDKZrmGwEjUiahJOg8WcVR8ijcssX0I0=
+github.com/xchacha20-poly1305/sing-vmess v0.2.7-0.20250814010615-f2ca0ade759d/go.mod h1:k/IE/OmkeXvwyH2aGMK9ir7TBYBHnaBHYFDN7BKNA3c=
 github.com/zeebo/assert v1.1.0 h1:hU1L1vLTHsnO8x8c9KAR5GmM5QscxHg5RNU5z5qbUWY=
 github.com/zeebo/assert v1.1.0/go.mod h1:Pq9JiuJQpG8JLJdtkwrJESF0Foym2/D9XMU5ciN/wJ0=
 github.com/zeebo/blake3 v0.2.4 h1:KYQPkhpRtcqh0ssGYcKLG1JYvddkEA8QwCM/yBqhaZI=

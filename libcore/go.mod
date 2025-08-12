@@ -20,6 +20,10 @@ require (
 
 // replace github.com/sagernet/sing-box => ../../sing-box
 
+replace github.com/sagernet/sing-box => github.com/xchacha20-poly1305/sing-box v1.12.2-0.20250814010959-411c1e33816d
+
+replace github.com/sagernet/sing-vmess => github.com/xchacha20-poly1305/sing-vmess v0.2.7-0.20250814010615-f2ca0ade759d
+
 // cmd
 require (
 	github.com/oschwald/geoip2-golang v1.11.0
@@ -51,7 +55,7 @@ require (
 	github.com/mdlayher/netlink v1.7.3-0.20250113171957-fbb4dce95f42 // indirect
 	github.com/mdlayher/socket v0.5.1 // indirect
 	github.com/metacubex/tfo-go v0.0.0-20241231083714-66613d49c422 // indirect
-	github.com/metacubex/utls v1.8.0 // indirect
+	github.com/metacubex/utls v1.8.1-0.20250811145843-49b4f106169a // indirect
 	github.com/mholt/acmez/v3 v3.1.2 // indirect
 	github.com/quic-go/qpack v0.5.1 // indirect
 	github.com/sagernet/bbolt v0.0.0-20231014093535-ea5cb2fe9f0a // indirect

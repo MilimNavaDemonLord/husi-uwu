@@ -2109,6 +2109,8 @@ public class SingBoxOptions {
 
         public String packet_encoding;
 
+        public String encryption;
+
     }
 
     public static class Outbound_VMessOptions extends Outbound {

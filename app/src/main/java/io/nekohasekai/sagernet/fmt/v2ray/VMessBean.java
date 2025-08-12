@@ -30,9 +30,6 @@ public class VMessBean extends StandardV2RayBean {
         super.initializeDefaultValues();
 
         alterId = alterId != null ? alterId : 0;
-        if (encryption == null) {
-            encryption = isVLESS() ? "" : "auto";
-        }
         if (authenticatedLength == null) authenticatedLength = false;
     }
 

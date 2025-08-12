@@ -319,7 +319,7 @@ fun StandardV2RayBean.toUriVMessVLESSTrojan(): String {
 
     if (!isTrojan) {
         if (isVLESS) {
-            builder.addQueryParameter("flow", encryption)
+            builder.addQueryParameter("flow", flow)
         } else {
             builder.addQueryParameter("encryption", encryption)
         }
@@ -558,7 +558,7 @@ fun buildSingBoxOutboundStandardV2RayBean(bean: StandardV2RayBean): Outbound = w
         server = bean.serverAddress
         server_port = bean.serverPort
         uuid = bean.uuid
-        flow = bean.encryption.replace("auto", "").blankAsNull()
+        flow = bean.flow.blankAsNull()
         packet_encoding = when (bean.packetEncoding) {
             1 -> "packetaddr"
             2 -> "xudp"
@@ -573,7 +573,7 @@ fun buildSingBoxOutboundStandardV2RayBean(bean: StandardV2RayBean): Outbound = w
         server_port = bean.serverPort
         uuid = bean.uuid
         alter_id = bean.alterId
-        security = bean.encryption.takeIf { it.isNotBlank() } ?: "auto"
+        security = bean.encryption.blankAsNull()
         packet_encoding = when (bean.packetEncoding) {
             1 -> "packetaddr"
             2 -> "xudp"

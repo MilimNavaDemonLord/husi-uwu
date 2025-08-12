@@ -72,6 +72,7 @@ abstract class StandardV2RaySettingsActivity : ProfileSettingsActivity<StandardV
                 DataStore.serverUserID = uuid
                 DataStore.serverAlterID = alterId
                 DataStore.serverEncryption = encryption
+                DataStore.serverFlow = flow
                 DataStore.serverPacketEncoding = packetEncoding
                 DataStore.serverAuthenticatedLength = authenticatedLength
             }
@@ -132,6 +133,7 @@ abstract class StandardV2RaySettingsActivity : ProfileSettingsActivity<StandardV
                 uuid = DataStore.serverUserID
                 alterId = DataStore.serverAlterID
                 encryption = DataStore.serverEncryption
+                flow = DataStore.serverFlow
                 packetEncoding = DataStore.serverPacketEncoding
                 authenticatedLength = DataStore.serverAuthenticatedLength
             }
@@ -149,7 +151,7 @@ abstract class StandardV2RaySettingsActivity : ProfileSettingsActivity<StandardV
     private lateinit var serverPath: EditTextPreference
     private lateinit var serverHeaders: EditTextPreference
     private lateinit var serverSecurity: SimpleMenuPreference
-    private lateinit var serverEncryption: SimpleMenuPreference // VLESS: flow
+    private lateinit var serverFlow: SimpleMenuPreference
 
     private lateinit var serverMux: MaterialSwitchPreference
     private lateinit var serverBrutal: MaterialSwitchPreference
@@ -191,7 +193,7 @@ abstract class StandardV2RaySettingsActivity : ProfileSettingsActivity<StandardV
         serverHeaders = findPreference(Key.SERVER_HEADERS)!!
         serverSecurity = findPreference(Key.SERVER_SECURITY)!!
         serverV2rayTransport = findPreference(Key.SERVER_V2RAY_TRANSPORT)!!
-        serverEncryption = findPreference(Key.SERVER_ENCRYPTION)!!
+        serverFlow = findPreference(Key.SERVER_FLOW)!!
 
         serverMux = findPreference(Key.SERVER_MUX)!!
         serverBrutal = findPreference(Key.SERVER_BRUTAL)!!
@@ -213,8 +215,8 @@ abstract class StandardV2RaySettingsActivity : ProfileSettingsActivity<StandardV
     /** Sets up the initial state of preferences based on the profile bean. */
     private fun PreferenceFragmentCompat.setupInitialState() {
         val isHttp = bean is HttpBean
-        val isVmess = bean is VMessBean && !bean!!.isVLESS
-        val isVless = bean!!.isVLESS
+        val isVmess = bean is VMessBean && !bean.isVLESS
+        val isVless = bean.isVLESS
         val isTrojan = bean is TrojanBean
 
         findPreference<EditTextPreference>(Key.SERVER_PORT)!!.setOnBindEditTextListener(
@@ -231,21 +233,11 @@ abstract class StandardV2RaySettingsActivity : ProfileSettingsActivity<StandardV
         findPreference<SimpleMenuPreference>(Key.SERVER_PACKET_ENCODING)!!
             .isVisible = isVmess || isVless
         findPreference<SimpleMenuPreference>(Key.SERVER_ENCRYPTION)!!.apply {
-            isVisible = isVmess || isVless
-            if (isVless) {
-                title = getString(R.string.xtls_flow)
-                setIcon(R.drawable.ic_baseline_stream_24)
-                setEntries(R.array.xtls_flow_value)
-                setEntryValues(R.array.xtls_flow_value)
-
-                setOnPreferenceChangeListener { _, newValue ->
-                    muxCategory.isVisible = newValue.toString().isBlank()
-                    true
-                }
-            } else {
-                setEntries(R.array.vmess_encryption_value)
-                setEntryValues(R.array.vmess_encryption_value)
-            }
+            isVisible = isVmess
+        }
+        serverFlow.isVisible = isVless
+        findPreference<EditTextPreference>(Key.SERVER_VLESS_ENCRYPTION)!!.apply {
+            isVisible = isVless
         }
         findPreference<EditTextPreference>(Key.SERVER_USERNAME)!!.isVisible = isHttp
         findPreference<EditTextPreference>(Key.SERVER_PASSWORD)!!.apply {
@@ -263,18 +255,18 @@ abstract class StandardV2RaySettingsActivity : ProfileSettingsActivity<StandardV
         serverV2rayTransport.isVisible = !isHttp
         serverMuxNumber.setOnBindEditTextListener(EditTextPreferenceModifiers.Number)
 
-        updateUiState(serverV2rayTransport.value, serverSecurity.value, getFlow())
+        updateUiState(serverV2rayTransport.value, serverSecurity.value, serverFlow.value)
     }
 
     /** Sets up listeners for preferences that change the UI dynamically. */
     private fun setupListeners() {
         serverV2rayTransport.setOnPreferenceChangeListener { _, newValue ->
-            updateUiState(newValue as String, serverSecurity.value, getFlow())
+            updateUiState(newValue as String, serverSecurity.value, serverFlow.value)
             true
         }
 
         serverSecurity.setOnPreferenceChangeListener { _, newValue ->
-            updateUiState(serverV2rayTransport.value, newValue as String, getFlow())
+            updateUiState(serverV2rayTransport.value, newValue as String, serverFlow.value)
             true
         }
 
@@ -406,10 +398,4 @@ abstract class StandardV2RaySettingsActivity : ProfileSettingsActivity<StandardV
     }
 
     private fun isTLS(security: String): Boolean = security == "tls"
-
-    private fun getFlow(): String? = if (bean!!.isVLESS) {
-        serverEncryption.value
-    } else {
-        null
-    }
 }

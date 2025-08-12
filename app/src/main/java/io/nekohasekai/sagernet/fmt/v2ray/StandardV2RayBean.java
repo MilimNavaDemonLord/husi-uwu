@@ -8,7 +8,8 @@ import io.nekohasekai.sagernet.fmt.AbstractBean;
 public abstract class StandardV2RayBean extends AbstractBean {
 
     public String uuid;
-    public String encryption; // or VLESS flow
+    public String encryption;
+    public String flow;
 
     /// ///// End of VMess & VLESS ////////
 
@@ -71,6 +72,8 @@ public abstract class StandardV2RayBean extends AbstractBean {
         super.initializeDefaultValues();
 
         if (uuid == null) uuid = "";
+        if (encryption == null) encryption = "";
+        if (flow == null) flow = "";
 
         if (v2rayTransport == null) v2rayTransport = "tcp";
         else if ("h2".equals(v2rayTransport)) v2rayTransport = "http";
@@ -107,13 +110,14 @@ public abstract class StandardV2RayBean extends AbstractBean {
 
     @Override
     public void serialize(ByteBufferOutput output) {
-        output.writeInt(7);
+        output.writeInt(8);
         super.serialize(output);
 
         output.writeString(uuid);
         output.writeString(encryption);
         if (this instanceof VMessBean) {
             output.writeInt(((VMessBean) this).alterId);
+            output.writeString(flow);
         }
 
         output.writeString(v2rayTransport);
@@ -178,6 +182,17 @@ public abstract class StandardV2RayBean extends AbstractBean {
         encryption = input.readString();
         if (this instanceof VMessBean) {
             ((VMessBean) this).alterId = input.readInt();
+
+            if (version >= 8) {
+                flow = input.readString();
+            } else {
+                // The developer of MatsuriDayo abused beans, ignoring that encryption is a reserved filed of VLESS.
+                // So in the past time, they use encryption to store flow.
+                if (encryption.contains("xtls")) {
+                    flow = encryption;
+                    encryption = null;
+                }
+            }
         }
 
         v2rayTransport = input.readString();

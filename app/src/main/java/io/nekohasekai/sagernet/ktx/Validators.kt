@@ -64,7 +64,7 @@ fun AbstractBean.isInsecure(): ValidateResult {
 
         is VMessBean -> {
             if (alterId > 0) return ResultInsecure(R.raw.vmess_md5_auth)
-            if (isVLESS || encryption in arrayOf("none", "zero")) {
+            if (isVLESS || encryption in arrayOf("", "none", "zero")) {
                 if (!isTLS()) return ResultInsecure(R.raw.not_encrypted)
             }
             if (allowInsecure) return ResultInsecure(R.raw.insecure)

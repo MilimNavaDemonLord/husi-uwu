@@ -135,6 +135,8 @@ object Key {
     const val SERVER_SECURITY = "serverSecurity"
     const val SERVER_SNI = "serverSNI"
     const val SERVER_ENCRYPTION = "serverEncryption"
+    const val SERVER_FLOW = "serverFlow"
+    const val SERVER_VLESS_ENCRYPTION = "serverVlessEncryption"
     const val SERVER_ALPN = "serverALPN"
     const val SERVER_CERTIFICATES = "serverCertificates"
     const val SERVER_PINNED_CERTIFICATE_CHAIN = "serverPinnedCertificateChain"
