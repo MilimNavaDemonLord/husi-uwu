@@ -1,62 +1,133 @@
 <resources>
 
-    <style name="Theme.SagerNet.Black" parent="Theme.SagerNet">
-        <item name="colorPrimary">@color/black</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorPrimaryContainer">@color/material_light_black</item>
-        <item name="colorOnPrimaryContainer">@color/white</item>
-        <item name="colorSecondary">@color/material_grey_800</item>
-        <item name="colorOnSecondary">@color/white</item>
-        <item name="colorSecondaryContainer">@color/material_grey_900</item>
-        <item name="colorOnSecondaryContainer">@color/white</item>
-        <item name="colorTertiary">@color/material_grey_700</item>
-        <item name="colorOnTertiary">@color/white</item>
-        <item name="colorTertiaryContainer">@color/material_grey_800</item>
-        <item name="colorOnTertiaryContainer">@color/white</item>
-        <item name="colorSurface">@color/black</item>
-        <item name="colorOnSurface">@color/white</item>
-        <item name="colorSurfaceVariant">@color/material_light_black</item>
-        <item name="colorOnSurfaceVariant">@color/white</item>
-
-        <item name="selectedColorPrimary">@color/white</item>
-
-        <item name="preferenceCategoryTitleTextColor">@color/white</item>
-        <item name="tabSelectedTextColor">@color/white</item>
-        <item name="tabTextColor">@color/material_grey_500</item>
-        <item name="android:textColorLink">@color/color_ng_black_accent</item>
-        <item name="android:progressTint">@color/white</item>
-        <item name="materialCardViewStyle">@style/Widget.AnXray.CardView.BlackTheme</item>
+    <style name="Theme.SagerNet" parent="@style/Theme.Material3.DayNight.NoActionBar">
+        <item name="android:colorBackground">@color/magenta_background</item>
+        <item name="android:scrollbarSize">0.0dip</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="actionBarPopupTheme">@style/Theme.SagerNet.PopupOverlay</item>
+        <item name="actionBarTheme">@style/Theme.SagerNet.ActionBarTheme</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_navigation_close</item>
+        <item name="actionOverflowButtonStyle">@style/Theme.SagerNet.ActionButton.Overflow</item>
+        <item name="chipStyle">@style/Widget.App.Chip.Choice</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorButtonNormal">?colorAccent</item>
+        <item name="colorError">@color/magenta_error</item>
+        <item name="colorErrorContainer">@color/magenta_errorContainer</item>
+        <item name="colorOnBackground">@color/magenta_onBackground</item>
+        <item name="colorOnError">@color/magenta_onError</item>
+        <item name="colorOnErrorContainer">@color/magenta_onErrorContainer</item>
+        <item name="colorOnPrimary">@color/magenta_onPrimary</item>
+        <item name="colorOnPrimaryContainer">@color/magenta_onPrimaryContainer</item>
+        <item name="colorOnPrimaryFixed">@color/magenta_onPrimaryFixed</item>
+        <item name="colorOnPrimaryFixedVariant">@color/magenta_onPrimaryFixedVariant</item>
+        <item name="colorOnSecondary">@color/magenta_onSecondary</item>
+        <item name="colorOnSecondaryContainer">@color/magenta_onSecondaryContainer</item>
+        <item name="colorOnSecondaryFixed">@color/magenta_onSecondaryFixed</item>
+        <item name="colorOnSecondaryFixedVariant">@color/magenta_onSecondaryFixedVariant</item>
+        <item name="colorOnSurface">@color/magenta_onSurface</item>
+        <item name="colorOnSurfaceInverse">@color/magenta_inverseOnSurface</item>
+        <item name="colorOnSurfaceVariant">@color/magenta_onSurfaceVariant</item>
+        <item name="colorOnTertiary">@color/magenta_onTertiary</item>
+        <item name="colorOnTertiaryContainer">@color/magenta_onTertiaryContainer</item>
+        <item name="colorOnTertiaryFixed">@color/magenta_onTertiaryFixed</item>
+        <item name="colorOnTertiaryFixedVariant">@color/magenta_onTertiaryFixedVariant</item>
+        <item name="colorOutline">@color/magenta_outline</item>
+        <item name="colorOutlineVariant">@color/magenta_outlineVariant</item>
+        <item name="colorPrimary">@color/magenta_primary</item>
+        <item name="colorPrimaryContainer">@color/magenta_primaryContainer</item>
+        <item name="colorPrimaryDark">?colorPrimary</item>
+        <item name="colorPrimaryFixed">@color/magenta_primaryFixed</item>
+        <item name="colorPrimaryFixedDim">@color/magenta_primaryFixedDim</item>
+        <item name="colorPrimaryInverse">@color/magenta_inversePrimary</item>
+        <item name="colorSecondary">@color/magenta_secondary</item>
+        <item name="colorSecondaryContainer">@color/magenta_secondaryContainer</item>
+        <item name="colorSecondaryFixed">@color/magenta_secondaryFixed</item>
+        <item name="colorSecondaryFixedDim">@color/magenta_secondaryFixedDim</item>
+        <item name="colorSurface">@color/magenta_surface</item>
+        <item name="colorSurfaceBright">@color/magenta_surfaceBright</item>
+        <item name="colorSurfaceContainer">@color/magenta_surfaceContainer</item>
+        <item name="colorSurfaceContainerHigh">@color/magenta_surfaceContainerHigh</item>
+        <item name="colorSurfaceContainerHighest">@color/magenta_surfaceContainerHighest</item>
+        <item name="colorSurfaceContainerLow">@color/magenta_surfaceContainerLow</item>
+        <item name="colorSurfaceContainerLowest">@color/magenta_surfaceContainerLowest</item>
+        <item name="colorSurfaceDim">@color/magenta_surfaceDim</item>
+        <item name="colorSurfaceInverse">@color/magenta_inverseSurface</item>
+        <item name="colorSurfaceVariant">@color/magenta_surfaceVariant</item>
+        <item name="colorTertiary">@color/magenta_tertiary</item>
+        <item name="colorTertiaryContainer">@color/magenta_tertiaryContainer</item>
+        <item name="colorTertiaryFixed">@color/magenta_tertiaryFixed</item>
+        <item name="colorTertiaryFixedDim">@color/magenta_tertiaryFixedDim</item>
+        <item name="itemShapeAppearance">@style/ShapeAppearance.Material3.MediumComponent</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+        <item name="popupMenuBackground">@drawable/uwu_bg_popup</item>
+        <item name="popupMenuStyle">@style/Theme.SagerNet.PopupMenu</item>
+        <item name="preferenceTheme">@style/Theme.SagerNet.PreferenceTheme</item>
+        <item name="selectedColorPrimary">?colorPrimary</item>
+        <item name="windowActionModeOverlay">true</item>
     </style>
-
-    <style name="Theme.SagerNet.Dialog.Black" parent="Theme.Material3.DayNight.Dialog.Alert">
-        <item name="colorPrimary">@color/black</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorPrimaryContainer">@color/material_light_black</item>
-        <item name="colorOnPrimaryContainer">@color/white</item>
-        <item name="colorSecondary">@color/material_grey_800</item>
-        <item name="colorOnSecondary">@color/white</item>
-        <item name="colorSecondaryContainer">@color/material_grey_900</item>
-        <item name="colorOnSecondaryContainer">@color/white</item>
-        <item name="colorTertiary">@color/material_grey_700</item>
-        <item name="colorOnTertiary">@color/white</item>
-        <item name="colorTertiaryContainer">@color/material_grey_800</item>
-        <item name="colorOnTertiaryContainer">@color/white</item>
-        <item name="colorSurface">@color/black</item>
-        <item name="colorOnSurface">@color/white</item>
-        <item name="colorSurfaceVariant">@color/material_light_black</item>
-        <item name="colorOnSurfaceVariant">@color/white</item>
-
-        <item name="selectedColorPrimary">@color/white</item>
-
-        <item name="preferenceCategoryTitleTextColor">@color/white</item>
-        <item name="tabSelectedTextColor">@color/white</item>
-        <item name="tabTextColor">@color/material_grey_500</item>
-        <item name="android:textColorLink">@color/color_ng_black_accent</item>
-        <item name="android:progressTint">@color/white</item>
-        <item name="materialCardViewStyle">@style/Widget.AnXray.CardView.BlackTheme</item>
-
-        <item name="windowNoTitle">true</item>
+    <style name="Theme.SagerNet.Dialog" parent="@style/Theme.Material3.DayNight.Dialog.Alert">
+        <item name="android:colorBackground">@color/magenta_background</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_navigation_close</item>
+        <item name="chipStyle">@style/Widget.App.Chip.Choice</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorButtonNormal">?colorAccent</item>
+        <item name="colorError">@color/magenta_error</item>
+        <item name="colorErrorContainer">@color/magenta_errorContainer</item>
+        <item name="colorOnBackground">@color/magenta_onBackground</item>
+        <item name="colorOnError">@color/magenta_onError</item>
+        <item name="colorOnErrorContainer">@color/magenta_onErrorContainer</item>
+        <item name="colorOnPrimary">@color/magenta_onPrimary</item>
+        <item name="colorOnPrimaryContainer">@color/magenta_onPrimaryContainer</item>
+        <item name="colorOnPrimaryFixed">@color/magenta_onPrimaryFixed</item>
+        <item name="colorOnPrimaryFixedVariant">@color/magenta_onPrimaryFixedVariant</item>
+        <item name="colorOnSecondary">@color/magenta_onSecondary</item>
+        <item name="colorOnSecondaryContainer">@color/magenta_onSecondaryContainer</item>
+        <item name="colorOnSecondaryFixed">@color/magenta_onSecondaryFixed</item>
+        <item name="colorOnSecondaryFixedVariant">@color/magenta_onSecondaryFixedVariant</item>
+        <item name="colorOnSurface">@color/magenta_onSurface</item>
+        <item name="colorOnSurfaceInverse">@color/magenta_inverseOnSurface</item>
+        <item name="colorOnSurfaceVariant">@color/magenta_onSurfaceVariant</item>
+        <item name="colorOnTertiary">@color/magenta_onTertiary</item>
+        <item name="colorOnTertiaryContainer">@color/magenta_onTertiaryContainer</item>
+        <item name="colorOnTertiaryFixed">@color/magenta_onTertiaryFixed</item>
+        <item name="colorOnTertiaryFixedVariant">@color/magenta_onTertiaryFixedVariant</item>
+        <item name="colorOutline">@color/magenta_outline</item>
+        <item name="colorOutlineVariant">@color/magenta_outlineVariant</item>
+        <item name="colorPrimary">@color/magenta_primary</item>
+        <item name="colorPrimaryContainer">@color/magenta_primaryContainer</item>
+        <item name="colorPrimaryDark">?colorPrimary</item>
+        <item name="colorPrimaryFixed">@color/magenta_primaryFixed</item>
+        <item name="colorPrimaryFixedDim">@color/magenta_primaryFixedDim</item>
+        <item name="colorPrimaryInverse">@color/magenta_inversePrimary</item>
+        <item name="colorSecondary">@color/magenta_secondary</item>
+        <item name="colorSecondaryContainer">@color/magenta_secondaryContainer</item>
+        <item name="colorSecondaryFixed">@color/magenta_secondaryFixed</item>
+        <item name="colorSecondaryFixedDim">@color/magenta_secondaryFixedDim</item>
+        <item name="colorSurface">@color/magenta_surface</item>
+        <item name="colorSurfaceBright">@color/magenta_surfaceBright</item>
+        <item name="colorSurfaceContainer">@color/magenta_surfaceContainer</item>
+        <item name="colorSurfaceContainerHigh">@color/magenta_surfaceContainerHigh</item>
+        <item name="colorSurfaceContainerHighest">@color/magenta_surfaceContainerHighest</item>
+        <item name="colorSurfaceContainerLow">@color/magenta_surfaceContainerLow</item>
+        <item name="colorSurfaceContainerLowest">@color/magenta_surfaceContainerLowest</item>
+        <item name="colorSurfaceDim">@color/magenta_surfaceDim</item>
+        <item name="colorSurfaceInverse">@color/magenta_inverseSurface</item>
+        <item name="colorSurfaceVariant">@color/magenta_surfaceVariant</item>
+        <item name="colorTertiary">@color/magenta_tertiary</item>
+        <item name="colorTertiaryContainer">@color/magenta_tertiaryContainer</item>
+        <item name="colorTertiaryFixed">@color/magenta_tertiaryFixed</item>
+        <item name="colorTertiaryFixedDim">@color/magenta_tertiaryFixedDim</item>
+        <item name="itemShapeAppearance">@style/ShapeAppearance.Material3.MediumComponent</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+        <item name="selectedColorPrimary">?colorPrimary</item>
         <item name="windowActionBar">false</item>
-        <item name="windowFixedHeightMajor" type="dimen">95%</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowFixedHeightMajor">95.00001%</item>
+        <item name="windowNoTitle">true</item>
     </style>
+    <style name="Theme.SagerNet.PopupOverlay" parent="@style/ThemeOverlay.Material3.Dark">
+        <item name="android:backgroundTint">?colorSurfaceContainerHigh</item>
+    </style>
+    
 </resources>
