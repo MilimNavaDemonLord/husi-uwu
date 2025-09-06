@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <EditTextPreference
         app:icon="@drawable/ic_social_emoji_symbols"
         app:key="routeName"
+        app:layout="@layout/uwu_preference_card_top"
         app:title="@string/route_name"
         app:useSimpleSummaryProvider="true" />
     <io.nekohasekai.sagernet.widget.AppListPreference
         app:icon="@drawable/ic_baseline_legend_toggle_24"
         app:key="routePackages"
+        app:layout="@layout/uwu_preference_card_middle"
         app:title="@string/apps" />
     <io.nekohasekai.sagernet.widget.ValuesJointToSummaryMultiSelectListPreference
         app:defaultValue="@array/empty"
@@ -16,35 +19,42 @@
         app:entryValues="@array/network_type_value"
         app:icon="@drawable/baseline_public_24"
         app:key="routeNetworkType"
+        app:layout="@layout/uwu_preference_card_middle"
         app:title="@string/network_type" />
     <rikka.preference.SimpleMenuPreference
         app:entries="@array/route_action_value"
         app:entryValues="@array/route_action_value"
         app:icon="@drawable/ic_baseline_shuffle_24"
         app:key="routeAction"
+        app:layout="@layout/uwu_preference_card_bottom"
         app:title="@string/route_action"
         app:useSimpleSummaryProvider="true" />
-    <PreferenceCategory app:title="@string/backup_rules">
+    <PreferenceCategory
+        app:title="@string/backup_rules">
         <EditTextPreference
             app:icon="@drawable/ic_baseline_domain_24"
             app:key="routeDomain"
+            app:layout="@layout/uwu_preference_card_top"
             app:title="domain"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_add_road_24"
             app:key="routeIP"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="ip"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             app:icon="@drawable/ic_maps_directions_boat"
             app:key="routePort"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="port"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_home_24"
             app:key="routeSourcePort"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="sourcePort"
             app:useSimpleSummaryProvider="true" />
         <io.nekohasekai.sagernet.widget.ValuesJointToSummaryMultiSelectListPreference
@@ -52,11 +62,13 @@
             app:entryValues="@array/route_protocol_value"
             app:icon="@drawable/ic_baseline_compare_arrows_24"
             app:key="routeNetwork"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="network"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_local_bar_24"
             app:key="routeSource"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="source"
             app:useSimpleSummaryProvider="true" />
         <io.nekohasekai.sagernet.widget.ValuesJointToSummaryMultiSelectListPreference
@@ -65,6 +77,7 @@
             app:entryValues="@array/sniff_protocol"
             app:icon="@drawable/ic_baseline_layers_24"
             app:key="routeProtocol"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="protocol" />
         <io.nekohasekai.sagernet.widget.ValuesJointToSummaryMultiSelectListPreference
             app:defaultValue="@array/empty"
@@ -72,29 +85,35 @@
             app:entryValues="@array/sniff_client"
             app:icon="@drawable/ic_baseline_fingerprint_24"
             app:key="routeClient"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/client_type" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_wifi"
             app:key="routeSSID"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="WIFI SSID"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_wifi_not_connected"
             app:key="routeBSSID"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="WIFI BSSID"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/baseline_public_24"
             app:key="routeClashMode"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/clash_mode"
             app:useSimpleSummaryProvider="true" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
             app:icon="@drawable/ic_baseline_card_giftcard_24"
             app:key="routeNetworkIsExpensive"
+            app:layout="@layout/uwu_preference_card_bottom_switch"
             app:title="@string/network_expensive"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
-
     <PreferenceCategory
         app:key="routeActionRoute"
         app:title="@string/menu_route">
@@ -103,37 +122,45 @@
             app:entryValues="@array/int_array_4"
             app:icon="@drawable/ic_hardware_router"
             app:key="routeOutbound"
+            app:layout="@layout/uwu_preference_card_single"
             app:title="outbound" />
     </PreferenceCategory>
-
     <PreferenceCategory
         app:key="routeActionRouteOptions"
         app:title="@string/route_options">
         <EditTextPreference
             app:icon="@drawable/ic_baseline_location_on_24"
             app:key="routeOverrideAddress"
+            app:layout="@layout/uwu_preference_card_top"
             app:title="@string/override_address"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_push_pin_24"
             app:key="routeOverridePort"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/override_port"
             app:useSimpleSummaryProvider="true" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
             app:icon="@drawable/ic_baseline_texture_24"
             app:key="routeTlsFragment"
+            app:layout="@layout/uwu_preference_card_middle_switch"
             app:title="@string/tls_fragment" />
         <io.nekohasekai.sagernet.widget.DurationPreference
             app:icon="@drawable/ic_baseline_timelapse_24"
             app:key="routeTlsFragmentFallbackDelay"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/tls_fragment_fallback_delay"
             app:useSimpleSummaryProvider="true" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
             app:icon="@drawable/ic_baseline_wb_sunny_24"
             app:key="routeTlsRecordFragment"
+            app:layout="@layout/uwu_preference_card_bottom_switch"
             app:title="@string/tls_record_fragment" />
     </PreferenceCategory>
-
     <PreferenceCategory
         app:key="routeActionResolveOptions"
         app:title="Resolve">
@@ -142,31 +169,37 @@
             app:entryValues="@array/network_strategies_values"
             app:icon="@drawable/ic_baseline_domain_24"
             app:key="routeResolveStrategy"
+            app:layout="@layout/uwu_preference_card_top"
             app:title="Resolve Strategy"
             app:useSimpleSummaryProvider="true" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
             app:icon="@drawable/ic_baseline_cached"
             app:key="routeResolveDisableCache"
+            app:layout="@layout/uwu_preference_card_middle_switch"
             app:title="Disable Cache"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_timelapse_24"
             app:key="routeResolveRewriteTTL"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="Rewrite TTL"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_push_pin_24"
             app:key="routeResolveClientSubnet"
+            app:layout="@layout/uwu_preference_card_bottom"
             app:title="Client Subnet"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
-
     <PreferenceCategory
         app:key="routeActionSniffOptions"
         app:title="@string/sniff">
         <io.nekohasekai.sagernet.widget.DurationPreference
             app:icon="@drawable/ic_baseline_timelapse_24"
             app:key="routeSniffTimeout"
+            app:layout="@layout/uwu_preference_card_top"
             app:title="@string/sniff_timeout"
             app:useSimpleSummaryProvider="true" />
         <io.nekohasekai.sagernet.widget.ValuesJointToSummaryMultiSelectListPreference
@@ -175,7 +208,7 @@
             app:entryValues="@array/sniff_protocol"
             app:icon="@drawable/ic_baseline_layers_24"
             app:key="routeSniffers"
+            app:layout="@layout/uwu_preference_card_bottom"
             app:title="Sniffers" />
     </PreferenceCategory>
-
 </PreferenceScreen>
