@@ -1,48 +1,56 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
-
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <EditTextPreference
         app:icon="@drawable/ic_social_emoji_symbols"
         app:key="profileName"
+        app:layout="@layout/uwu_preference_card_single"
         app:title="@string/profile_name"
         app:useSimpleSummaryProvider="true" />
-
-    <PreferenceCategory app:title="@string/proxy_cat">
-
+    <PreferenceCategory
+        app:title="@string/proxy_cat">
         <EditTextPreference
             app:icon="@drawable/ic_hardware_router"
             app:key="serverAddress"
+            app:layout="@layout/uwu_preference_card_top"
             app:title="@string/server_address"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_maps_directions_boat"
             app:key="serverPort"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/server_port"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_person_24"
             app:key="serverUsername"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/username_opt"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:dialogLayout="@layout/layout_password_dialog"
             app:icon="@drawable/ic_settings_password"
             app:key="serverPassword"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/password_opt" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_person_24"
             app:key="serverUserID"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/uuid" />
         <EditTextPreference
             app:icon="@drawable/ic_maps_360"
             app:key="serverAlterID"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/alter_id"
             app:useSimpleSummaryProvider="true" />
-        <!-- Also VLESS flow -->
         <rikka.preference.SimpleMenuPreference
             app:entries="@array/vmess_encryption_value"
             app:entryValues="@array/vmess_encryption_value"
             app:icon="@drawable/ic_notification_enhanced_encryption"
             app:key="serverEncryption"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/encryption"
             app:useSimpleSummaryProvider="true" />
         <rikka.preference.SimpleMenuPreference
@@ -50,6 +58,7 @@
             app:entryValues="@array/int_array_3"
             app:icon="@drawable/baseline_widgets_24"
             app:key="serverPacketEncoding"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/packet_encoding"
             app:useSimpleSummaryProvider="true" />
         <rikka.preference.SimpleMenuPreference
@@ -57,21 +66,25 @@
             app:entryValues="@array/networks_value"
             app:icon="@drawable/ic_baseline_compare_arrows_24"
             app:key="serverV2rayTransport"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/v2ray_transport"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_airplanemode_active_24"
             app:key="serverHost"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/http_host"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_format_align_left_24"
             app:key="serverPath"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/http_path"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_import_contacts_24"
             app:key="serverHeaders"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/http_headers"
             app:useSimpleSummaryProvider="true" />
         <rikka.preference.SimpleMenuPreference
@@ -79,10 +92,10 @@
             app:entryValues="@array/transport_layer_encryption_value"
             app:icon="@drawable/ic_baseline_layers_24"
             app:key="serverSecurity"
+            app:layout="@layout/uwu_preference_card_bottom"
             app:title="@string/security"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
-
     <PreferenceCategory
         app:key="serverWsCategory"
         app:title="@string/cag_ws">
@@ -90,58 +103,71 @@
             app:defaultValue="0"
             app:icon="@drawable/ic_baseline_compare_arrows_24"
             app:key="serverWsMaxEarlyData"
+            app:layout="@layout/uwu_preference_card_top"
             app:title="@string/ws_max_early_data"
             app:useSimpleSummaryProvider="true" />
-
         <EditTextPreference
             app:icon="@drawable/ic_baseline_stream_24"
             app:key="serverWsEarlyDataHeaderName"
+            app:layout="@layout/uwu_preference_card_bottom"
             app:title="@string/early_data_header_name"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
-
     <PreferenceCategory
         app:key="serverSecurityCategory"
         app:title="@string/security_settings">
         <EditTextPreference
             app:icon="@drawable/ic_action_copyright"
             app:key="serverSNI"
+            app:layout="@layout/uwu_preference_card_top"
             app:title="@string/sni"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_legend_toggle_24"
             app:key="serverALPN"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/alpn"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_vpn_key_24"
             app:key="serverCertificates"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/certificates"
             app:useSimpleSummaryProvider="true" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
             app:icon="@drawable/ic_notification_enhanced_encryption"
             app:key="serverAllowInsecure"
+            app:layout="@layout/uwu_preference_card_middle_switch"
             app:summary="@string/allow_insecure_sum"
             app:title="@string/allow_insecure" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
             app:icon="@drawable/ic_baseline_transgender_24"
             app:key="serverDisableSNI"
+            app:layout="@layout/uwu_preference_card_middle_switch"
             app:title="@string/tuic_disable_sni" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
             app:icon="@drawable/ic_baseline_texture_24"
             app:key="serverFragment"
+            app:layout="@layout/uwu_preference_card_middle_switch"
             app:title="@string/tls_fragment" />
         <io.nekohasekai.sagernet.widget.DurationPreference
             app:icon="@drawable/ic_baseline_timelapse_24"
             app:key="serverFragmentFallbackDelay"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/tls_fragment_fallback_delay"
             app:useSimpleSummaryProvider="true" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
             app:icon="@drawable/ic_baseline_wb_sunny_24"
             app:key="serverRecordFragment"
+            app:layout="@layout/uwu_preference_card_bottom_switch"
             app:title="@string/tls_record_fragment" />
     </PreferenceCategory>
-
     <PreferenceCategory
         app:key="serverTlsCamouflageCategory"
         app:title="@string/tls_camouflage_settings">
@@ -151,37 +177,44 @@
             app:entryValues="@array/utls_fingerprint_entry"
             app:icon="@drawable/ic_baseline_fingerprint_24"
             app:key="serverUtlsFingerprint"
+            app:layout="@layout/uwu_preference_card_top"
             app:title="@string/utls_fingerprint"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_vpn_key_24"
             app:key="serverRealityPublicKey"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/reality_public_key"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_texture_24"
             app:key="serverRealityShortID"
+            app:layout="@layout/uwu_preference_card_bottom"
             app:title="@string/reality_short_id"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
-
     <PreferenceCategory
         app:key="serverMuxCategory"
         app:title="@string/mux_preference">
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
             app:icon="@drawable/ic_baseline_compare_arrows_24"
             app:key="serverMux"
+            app:layout="@layout/uwu_preference_card_single_switch"
             app:summary="@string/mux_sum"
             app:title="@string/enable_mux" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
             app:icon="@drawable/ic_baseline_bolt"
             app:key="serverBrutal"
+            app:layout="@layout/uwu_preference_card_top_switch"
             app:title="@string/enable_brutal" />
         <rikka.preference.SimpleMenuPreference
             app:defaultValue="0"
             app:entries="@array/mux_types"
             app:entryValues="@array/int_array_3"
             app:key="serverMuxType"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/mux_type"
             app:useSimpleSummaryProvider="true" />
         <rikka.preference.SimpleMenuPreference
@@ -189,44 +222,56 @@
             app:entries="@array/mux_strategies"
             app:entryValues="@array/int_array_3"
             app:key="serverMuxStrategy"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/mux_strategy"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:defaultValue="8"
             app:icon="@drawable/ic_baseline_low_priority_24"
             app:key="serverMuxNumber"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/mux_number"
             app:useSimpleSummaryProvider="true" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
             app:icon="@drawable/baseline_developer_board_24"
             app:key="serverMuxPadding"
+            app:layout="@layout/uwu_preference_card_bottom_switch"
             app:title="@string/padding" />
     </PreferenceCategory>
-
     <PreferenceCategory
         app:key="serverEchCategory"
         app:title="@string/ech">
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
             app:icon="@drawable/ic_baseline_security_24"
             app:key="serverECH"
+            app:layout="@layout/uwu_preference_card_top_switch"
             app:title="@string/enable" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_nfc_24"
             app:key="serverECHConfig"
+            app:layout="@layout/uwu_preference_card_bottom"
             app:title="@string/ech_config"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
-
     <PreferenceCategory
-        app:icon="@drawable/ic_baseline_grid_3x3_24"
         app:key="serverVMessExperimentsCategory"
         app:title="@string/experimental_settings">
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            app:icon="@drawable/ic_baseline_grid_3x3_24"
             app:key="serverAuthenticatedLength"
+            app:layout="@layout/uwu_preference_card_single_switch"
             app:summary="@string/experimental_authenticated_length"
             app:title="@string/authenticated_length" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
+            app:icon="@drawable/ic_toggle_switch"
             app:key="udpOverTcp"
+            app:layout="@layout/uwu_preference_card_single_switch"
             app:title="@string/udp_over_tcp" />
     </PreferenceCategory>
 </PreferenceScreen>
