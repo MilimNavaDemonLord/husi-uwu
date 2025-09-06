@@ -1,64 +1,76 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
-
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <EditTextPreference
         app:icon="@drawable/ic_social_emoji_symbols"
         app:key="profileName"
+        app:layout="@layout/uwu_preference_card_single"
         app:title="@string/profile_name"
         app:useSimpleSummaryProvider="true" />
-
-    <PreferenceCategory app:title="@string/proxy_cat">
+    <PreferenceCategory
+        app:title="@string/proxy_cat">
         <EditTextPreference
             app:icon="@drawable/ic_hardware_router"
             app:key="serverAddress"
+            app:layout="@layout/uwu_preference_card_top"
             app:title="@string/server_address"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_maps_directions_boat"
             app:key="serverPort"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/server_port"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_domain_24"
             app:key="localAddress"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/wireguard_local_address"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:dialogLayout="@layout/layout_password_dialog"
             app:icon="@drawable/ic_baseline_vpn_key_24"
             app:key="privateKey"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/ssh_private_key"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_action_copyright"
             app:key="publicKey"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/wireguard_public_key"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:dialogLayout="@layout/layout_password_dialog"
             app:icon="@drawable/ic_settings_password"
             app:key="preSharedKey"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/wireguard_psk" />
         <EditTextPreference
             app:defaultValue="1420"
             app:icon="@drawable/baseline_public_24"
             app:key="serverMTU"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/mtu"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_fingerprint_24"
             app:key="serverReserved"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/reserved"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_stream_24"
             app:key="listenPort"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/listen_port"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_cached"
             app:key="serverPersistentKeepaliveInterval"
+            app:layout="@layout/uwu_preference_card_bottom"
             app:title="@string/persistent_keepalive_interval"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
-
 </PreferenceScreen>
