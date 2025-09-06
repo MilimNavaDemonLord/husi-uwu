@@ -1,66 +1,79 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
-
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <EditTextPreference
         app:icon="@drawable/ic_social_emoji_symbols"
         app:key="profileName"
+        app:layout="@layout/uwu_preference_card_single"
         app:title="@string/profile_name"
         app:useSimpleSummaryProvider="true" />
-
-    <PreferenceCategory app:title="@string/proxy_cat">
-
+    <PreferenceCategory
+        app:title="@string/proxy_cat">
         <EditTextPreference
             app:icon="@drawable/ic_hardware_router"
             app:key="serverAddress"
+            app:layout="@layout/uwu_preference_card_top"
             app:title="@string/server_address"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_maps_directions_boat"
             app:key="serverPort"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/server_port"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:dialogLayout="@layout/layout_password_dialog"
             app:icon="@drawable/ic_settings_password"
             app:key="serverPassword"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/password" />
         <io.nekohasekai.sagernet.widget.DurationPreference
             app:defaultValue="30s"
             app:icon="@drawable/ic_baseline_timelapse_24"
             app:key="serverIdleSessionCheckInterval"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/idle_session_check_interval"
             app:useSimpleSummaryProvider="true" />
         <io.nekohasekai.sagernet.widget.DurationPreference
             app:defaultValue="30s"
             app:icon="@drawable/ic_baseline_flip_camera_android_24"
             app:key="serverIdleSessionTimeout"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/idle_session_timeout"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:defaultValue="0"
             app:icon="@drawable/ic_baseline_cached"
             app:key="serverMinIdleSession"
+            app:layout="@layout/uwu_preference_card_bottom"
             app:title="@string/min_idle_session"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
-
-    <PreferenceCategory app:title="@string/security_settings">
+    <PreferenceCategory
+        app:title="@string/security_settings">
         <EditTextPreference
             app:icon="@drawable/ic_action_copyright"
             app:key="serverSNI"
+            app:layout="@layout/uwu_preference_card_top"
             app:title="@string/sni"
             app:useSimpleSummaryProvider="true" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
             app:icon="@drawable/ic_notification_enhanced_encryption"
             app:key="serverAllowInsecure"
+            app:layout="@layout/uwu_preference_card_middle_switch"
+            app:summary="@string/allow_insecure_sum"
             app:title="@string/allow_insecure" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_legend_toggle_24"
             app:key="serverALPN"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/alpn"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_vpn_key_24"
             app:key="serverCertificates"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/certificates"
             app:useSimpleSummaryProvider="true" />
         <rikka.preference.SimpleMenuPreference
@@ -69,34 +82,48 @@
             app:entryValues="@array/utls_fingerprint_entry"
             app:icon="@drawable/ic_baseline_fingerprint_24"
             app:key="serverUtlsFingerprint"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/utls_fingerprint"
             app:useSimpleSummaryProvider="true" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
             app:icon="@drawable/ic_baseline_transgender_24"
             app:key="serverDisableSNI"
+            app:layout="@layout/uwu_preference_card_middle_switch"
             app:title="@string/tuic_disable_sni" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
             app:icon="@drawable/ic_baseline_texture_24"
             app:key="serverFragment"
+            app:layout="@layout/uwu_preference_card_middle_switch"
             app:title="@string/tls_fragment" />
         <io.nekohasekai.sagernet.widget.DurationPreference
             app:icon="@drawable/ic_baseline_timelapse_24"
             app:key="serverFragmentFallbackDelay"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/tls_fragment_fallback_delay"
             app:useSimpleSummaryProvider="true" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
             app:icon="@drawable/ic_baseline_wb_sunny_24"
             app:key="serverRecordFragment"
+            app:layout="@layout/uwu_preference_card_middle_switch"
             app:title="@string/tls_record_fragment" />
         <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
             app:icon="@drawable/ic_baseline_security_24"
             app:key="serverECH"
+            app:layout="@layout/uwu_preference_card_middle_switch"
             app:title="@string/ech" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_nfc_24"
             app:key="serverECHConfig"
+            app:layout="@layout/uwu_preference_card_bottom"
             app:title="@string/ech_config"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
-
 </PreferenceScreen>
