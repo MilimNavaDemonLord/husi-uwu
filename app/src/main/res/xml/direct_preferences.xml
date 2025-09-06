@@ -1,9 +1,10 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
-
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <EditTextPreference
         app:icon="@drawable/ic_social_emoji_symbols"
         app:key="profileName"
+        app:layout="@layout/uwu_preference_card_single"
         app:title="@string/profile_name"
         app:useSimpleSummaryProvider="true" />
-
 </PreferenceScreen>
