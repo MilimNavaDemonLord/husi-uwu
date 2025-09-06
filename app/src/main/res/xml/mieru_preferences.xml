@@ -1,21 +1,25 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
-
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <EditTextPreference
         app:icon="@drawable/ic_social_emoji_symbols"
         app:key="profileName"
+        app:layout="@layout/uwu_preference_card_single"
         app:title="@string/profile_name"
         app:useSimpleSummaryProvider="true" />
-
-    <PreferenceCategory app:title="@string/proxy_cat">
-
+    <PreferenceCategory
+        app:title="@string/proxy_cat">
         <EditTextPreference
             app:icon="@drawable/ic_hardware_router"
             app:key="serverAddress"
+            app:layout="@layout/uwu_preference_card_top"
             app:title="@string/server_address"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_maps_directions_boat"
             app:key="serverPort"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/server_port"
             app:useSimpleSummaryProvider="true" />
         <rikka.preference.SimpleMenuPreference
@@ -24,21 +28,25 @@
             app:entryValues="@array/mieru_protocol"
             app:icon="@drawable/ic_baseline_compare_arrows_24"
             app:key="serverProtocol"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/protocol"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_person_24"
             app:key="serverUsername"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/username"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:dialogLayout="@layout/layout_password_dialog"
             app:icon="@drawable/ic_settings_password"
             app:key="serverPassword"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/password" />
         <EditTextPreference
             app:icon="@drawable/baseline_public_24"
             app:key="serverMTU"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/mtu"
             app:useSimpleSummaryProvider="true" />
         <rikka.preference.SimpleMenuPreference
@@ -46,8 +54,8 @@
             app:entryValues="@array/int_array_4"
             app:icon="@drawable/ic_baseline_compare_arrows_24"
             app:key="serverMuxNumber"
+            app:layout="@layout/uwu_preference_card_bottom"
             app:title="@string/mux_preference"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
-
 </PreferenceScreen>
