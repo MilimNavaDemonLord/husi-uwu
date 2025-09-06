@@ -1,62 +1,65 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
-
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <EditTextPreference
         app:icon="@drawable/ic_social_emoji_symbols"
         app:key="profileName"
+        app:layout="@layout/uwu_preference_card_single"
         app:title="@string/profile_name"
         app:useSimpleSummaryProvider="true" />
-
-    <PreferenceCategory app:title="@string/proxy_cat">
-
+    <PreferenceCategory
+        app:title="@string/proxy_cat">
         <EditTextPreference
             app:icon="@drawable/ic_hardware_router"
             app:key="serverAddress"
+            app:layout="@layout/uwu_preference_card_top"
             app:title="@string/server_address"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_maps_directions_boat"
             app:key="serverPort"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/server_port"
             app:useSimpleSummaryProvider="true" />
         <EditTextPreference
             app:icon="@drawable/ic_baseline_person_24"
             app:key="serverUsername"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/username"
             app:useSimpleSummaryProvider="true" />
-
         <rikka.preference.SimpleMenuPreference
             app:entries="@array/ssh_auth_type"
             app:entryValues="@array/int_array_3"
             app:icon="@drawable/ic_baseline_compare_arrows_24"
             app:key="serverAuthType"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/hysteria_auth_type"
             app:useSimpleSummaryProvider="true" />
-
         <EditTextPreference
             app:dialogLayout="@layout/layout_password_dialog"
             app:icon="@drawable/ic_settings_password"
             app:key="serverPassword"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/password" />
-
         <EditTextPreference
             app:dialogLayout="@layout/layout_password_dialog"
             app:icon="@drawable/ic_baseline_vpn_key_24"
             app:key="serverPrivateKey"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/ssh_private_key"
             app:useSimpleSummaryProvider="true" />
-
         <EditTextPreference
             app:dialogLayout="@layout/layout_password_dialog"
             app:icon="@drawable/ic_settings_password"
             app:key="serverPassword1"
+            app:layout="@layout/uwu_preference_card_middle"
             app:title="@string/ssh_private_key_passphrase" />
-
         <EditTextPreference
             app:icon="@drawable/ic_action_copyright"
             app:key="serverCertificates"
+            app:layout="@layout/uwu_preference_card_bottom"
             app:title="@string/ssh_public_key"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
-
-
 </PreferenceScreen>
