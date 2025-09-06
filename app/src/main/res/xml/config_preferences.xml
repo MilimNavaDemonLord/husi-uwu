@@ -1,20 +1,24 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
-
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <EditTextPreference
         app:icon="@drawable/ic_social_emoji_symbols"
         app:key="profileName"
+        app:layout="@layout/uwu_preference_card_top"
         app:title="@string/profile_name"
         app:useSimpleSummaryProvider="true" />
-
     <io.nekohasekai.sagernet.widget.MaterialSwitchPreference
+        android:summaryOn="@string/on"
+        android:summaryOff="@string/off"
         app:icon="@drawable/ic_baseline_import_contacts_24"
         app:key="isOutboundOnly"
+        app:layout="@layout/uwu_preference_card_middle_switch"
         app:title="@string/is_outbound_only" />
-
     <io.nekohasekai.sagernet.widget.EditConfigPreference
         app:icon="@drawable/ic_baseline_layers_24"
         app:key="serverConfig"
+        app:layout="@layout/uwu_preference_card_bottom"
         app:title="@string/custom_config"
         app:useSimpleSummaryProvider="true" />
-
 </PreferenceScreen>
