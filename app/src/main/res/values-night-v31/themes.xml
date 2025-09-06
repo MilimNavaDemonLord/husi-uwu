@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SagerNet.Dialog.Dynamic" parent="@style/Theme.Material3.DynamicColors.Dark.Dialog.Alert">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="actionBarTheme">@style/Theme.SagerNet.ActionBarTheme</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_navigation_close</item>
+        <item name="chipStyle">@style/Widget.App.Chip.Choice</item>
+        <item name="itemShapeAppearance">@style/ShapeAppearance.Material3.MediumComponent</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+        <item name="selectedColorPrimary">?colorPrimary</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowFixedHeightMajor">95.00001%</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.SagerNet.Dynamic" parent="@style/Theme.Material3.DynamicColors.Dark">
+        <item name="android:scrollbarSize">0.0dip</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="actionBarPopupTheme">@style/Theme.SagerNet.PopupOverlay</item>
+        <item name="actionBarTheme">@style/Theme.SagerNet.ActionBarTheme</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_navigation_close</item>
+        <item name="actionOverflowButtonStyle">@style/Theme.SagerNet.ActionButton.Overflow</item>
+        <item name="chipStyle">@style/Widget.App.Chip.Choice</item>
+        <item name="itemShapeAppearance">@style/ShapeAppearance.Material3.MediumComponent</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+        <item name="popupMenuBackground">@drawable/uwu_bg_popup</item>
+        <item name="popupMenuStyle">@style/Theme.SagerNet.PopupMenu</item>
+        <item name="preferenceTheme">@style/Theme.SagerNet.PreferenceTheme</item>
+        <item name="selectedColorPrimary">?colorPrimary</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
